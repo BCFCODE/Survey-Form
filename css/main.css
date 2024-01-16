@@ -1,0 +1,109 @@
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+main {
+  /* background-color: yellow; */
+}
+header {
+  color: #F3F3F3;
+  text-align: center;
+  max-width: auto;
+  padding: 0 70px 0 70px;
+}
+#title {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 1.5em 0 0 0;
+}
+#description {
+  font-weight: 200;
+  margin: 0 0 1.5em;
+}
+#survey-form {
+  /* margin: 0 10px; */
+  width: auto;
+  margin: 30px auto;
+}
+
+.form-inside {
+  border-radius: 5px;
+  padding: 40px;
+  background-color: var(--color-darkblue-alpha);
+  display: flex;
+  flex-direction: column;
+  color: var(--color-white)
+}
+
+
+
+input[type="text"], input[type="email"], input[type="number"] /*stacked inputs and their textes*/{
+  display: block;
+  width: 100%;
+}
+#dropdown {
+  width: 100%;
+  color: var(--color-darkblue-alpha);
+  margin-bottom: 30px;
+}
+
+.input {
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+label /*checkboxes vertical alignment*/{
+  display: block;
+}
+
+.checkboxes label:first-child {
+  margin-top: 20px;
+}
+.checkboxes label {
+  margin-top: 5px;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 3px;
+  margin: 5px 0 0 0;
+}
+.textarea {
+  margin: 40px 0 26px 0;
+}
+#submit /*submit button*/ {
+ margin: 0;
+ padding: 12px 0;
+ background-color: var(--color-green);
+ color: white;
+ font-size: 16px;
+}
